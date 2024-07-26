@@ -1,15 +1,19 @@
-import Navbar from "./components/Navbar";
-import Main from "./components/Main";
 import React from "react";
+import About from "./components/About";
+import Info from "./components/Info";
+import Interest from "./components/Interests";
+import Footer from "./components/Footer";
+import './style.css';
 
-function App(){
-    return(
+function App() {
+    return (
         <div className="container">
-            <Navbar />
-            <Main />
+            <Info />
+            <About />
+            <Interest />
+            <Footer />
         </div>
-        
     );
 }
 
-export default App
+export default App;
