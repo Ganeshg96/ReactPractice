@@ -44,45 +44,61 @@ section {
     text-align: center;
 }
 
-.cards {
+.bold {
+    font-weight: bold;
+}
+
+.gray {
+    color: #918E9B;
+}
+
+.cards-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    overflow-x: auto;
+    padding: 10px; 
 }
 
-.contact-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
+.card {
+    width: 175px;
+    font-size: 12px;
+    flex: 0 0 auto;         
+    display: flex;          
+    flex-direction: column; 
+    position: relative;
 }
 
-.contact-card--image {
+.card--image {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 9px;
+    margin-bottom: 9px;
 }
 
-.contact-card--name {
-    font-size: 24px;
-    margin: 10px 0;
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.info-group {
+.card--stats {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 5px 0;
 }
 
-.info-group--icon {
-    width: 20px;
-    margin-right: 10px;
+.card--star {
+    height: 14px;
 }
 
-.info-group--text {
-    font-size: 16px;
+.card--price {
+    margin-top: auto;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
