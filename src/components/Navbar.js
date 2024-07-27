@@ -4,7 +4,8 @@ import '../style.css';
 export default function Navbar() {
     return (
         <nav>
-            <img src='/images/airbnb-logo.png' alt="Airbnb Logo" className="nav--logo" />
+            <img src='/images/web-logo.png' alt="web Logo" className="nav--logo" />
+            <h3>my travel journel.</h3>
         </nav>
     );
 }

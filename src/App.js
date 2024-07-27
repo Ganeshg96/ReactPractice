@@ -1,30 +1,26 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import Card from "./components/Card";
 import data from "./data";
 import './style.css';
 
 function App() {
-    const cards = data.map(item => {
-        return (
-            <Card
-                key={item.id} // Ensure each card has a unique key
-                img={item.coverImg}
-                rating={item.stats.rating}
-                reviewCount={item.stats.reviewCount}
-                location={item.location}
-                title={item.title}
-                price={item.price}
-                openSpots={item.openSpots}
-            />
-        );
-    });
+    const cards = data.map(item => (
+        <Card
+            key={item.id}
+            image={item.image}
+            startDate={item.startDate}
+            endDate={item.endDate}
+            title={item.title}
+            description={item.description}
+            country={item.country}
+            googleMapsLink={item.googleMapsLink}
+        />
+    ));
 
     return (
         <div>
             <Navbar />
-            <Hero />
             <div className="cards-list">
                 {cards}
             </div>
