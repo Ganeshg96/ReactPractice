@@ -1,31 +1,15 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Card from "./components/Card";
-import data from "./data";
-import './style.css';
+import React from "react"
+import './style.css'
+import Header from "./components/Header"
+import Meme from "./components/Meme"
 
-function App() {
-    const cards = data.map(item => (
-        <Card
-            key={item.id}
-            image={item.image}
-            startDate={item.startDate}
-            endDate={item.endDate}
-            title={item.title}
-            description={item.description}
-            country={item.country}
-            googleMapsLink={item.googleMapsLink}
-        />
-    ));
-
+export default function App() {
     return (
         <div>
-            <Navbar />
-            <div className="cards-list">
-                {cards}
-            </div>
+            <Header />
+            <Meme />
         </div>
-    );
-}
+    )
+} 
 
-export default App;
+
